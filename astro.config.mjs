@@ -7,7 +7,7 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   site: "https://ryfazrin.github.io",
-  base: '/GootaDocs',
+  base: '/GootaDocs/',
   markdown: {
     smartypants: true,
     syntaxHighlight: "shiki",
