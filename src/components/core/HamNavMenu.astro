@@ -11,6 +11,7 @@ import { menu } from "@/lib/utils";
 
 import { menu_items, docconfig } from "@/config";
 
+const baseUrl = import.meta.env.BASE_URL;
 const pathname: string = new URL(Astro.request.url).pathname;
 const pathname_part: string = pathname.split("/")[1];
 ---
@@ -43,7 +44,7 @@ const pathname_part: string = pathname.split("/")[1];
     <div class="mt-6 flex flex-col items-start px-6">
       {
         menu_items.map((item) => (
-          <a href={item.href}>
+          <a href={`${baseUrl}${item.href}`}>
             <Button
               variant="link"
               className=`${"/" + pathname_part === "/" + item.href.split("/")[1] ? "underline" : ""} text-foreground`

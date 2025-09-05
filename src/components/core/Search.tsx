@@ -117,7 +117,7 @@ export function Search() {
                           key={refIndex}
                         >
                           <a
-                            href={`/${item.slug}`}
+                            href={`${import.meta.env.BASE_URL}${item.slug}`}
                             key={refIndex}
                             className=" no-underline hover:text-primary-foreground"
                           >
